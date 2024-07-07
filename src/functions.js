@@ -8,7 +8,7 @@ function checkPhoneNumber() {
         method: "sendMessage",
         body: {
             chat_id: $.request.data.chatId,
-            text: text,
+            text: "Нажмите кнопку, чтобы поделиться номером телефона.",
             reply_markup: {
                 keyboard: [
                     [{text: "Поделиться номером", request_contact: true}],
