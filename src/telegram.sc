@@ -9,15 +9,16 @@ theme: /Telegram
             a: Введите Ваш номер телефона.
 
         state: TelegramAuth
+            event: telegramSendContact
             q: * $phoneNumber * || fromState = /Telegram/TelegramStart/TelegramAuthNoMatch
             q: * $phoneNumber *
             script:
-                $temp.response = authCheck($parseTree._phoneNumber);
+                $temp.response = authCheck($request.query);
             if: $temp.response
                 go!: /Conversations/Hello
             else:
                 script:
-                    $client.phone = $parseTree._phoneNumber
+                    $client.phone = $request.query
                 a: Уточните ваше ФИО в формате: "Фамилия Имя Отчество (при наличии)".
 
             state: ClientName
