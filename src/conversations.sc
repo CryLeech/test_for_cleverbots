@@ -1,4 +1,12 @@
 theme: /Conversations
+    
+    state: Start
+        if: $request.data.isAuth
+            go!: /Conversations/Hello
+        else:
+            a: Вы не авторизованы на сайте. Сначала пройдите авторизацию на сайте.
+            script:
+                $jsapi.stopSession();
 
     state: Hello
         if: !$injector.accident
@@ -12,7 +20,7 @@ theme: /Conversations
     state: MainMenu
         a: Где-то тут должен быть основной бот.
         script:
-                $jsapi.stopSession();
+            $jsapi.stopSession();
 
     state: ToOperator
         random:
