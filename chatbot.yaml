@@ -15,6 +15,9 @@ nlp:
     patterns: 0.2
 
 injector:
+  #урл авторизации
   authUrl: "https://example.com/api/v1/check/"
+  #урл регистрации
   registrationUrl: "https://example.com/api/v1/reg/"
+  #аварийник
   accident: false
