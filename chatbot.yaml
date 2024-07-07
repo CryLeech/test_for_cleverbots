@@ -1,4 +1,4 @@
-name: zb-cailapub
+name: test
 
 entryPoint: main.sc
 
@@ -13,3 +13,8 @@ nlp:
   intentNoMatchThresholds:
     phrases: 0.2
     patterns: 0.2
+
+injector:
+  authUrl: "https://example.com/api/v1/check/"
+  registrationUrl: "https://example.com/api/v1/reg/"
+  accident: false
