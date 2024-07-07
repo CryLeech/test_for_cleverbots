@@ -52,6 +52,7 @@ theme: /Telegram
                     else:
                         a: Вы не прошли авторизацию, попробуйте позже.
                         script:
+                            $analytics.setSessionResult("Клиент не прошел авторизацию");
                             $jsapi.stopSession();
 
         state: TelegramAuthNoMatch
@@ -65,6 +66,7 @@ theme: /Telegram
             else:
                 a: Вы не прошли авторизацию, попробуйте позже.
                 script:
+                    $analytics.setSessionResult("Клиент не прошел авторизацию");
                     $jsapi.stopSession();
 
     state: SmsSuccess
@@ -87,4 +89,5 @@ theme: /Telegram
                 else:
                     a: Вы не прошли авторизацию, попробуйте позже
                     script:
+                        $analytics.setSessionResult("Клиент не прошел авторизацию");
                         $jsapi.stopSession();

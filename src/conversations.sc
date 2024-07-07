@@ -6,6 +6,7 @@ theme: /Conversations
         else:
             a: Вы не авторизованы на сайте. Сначала пройдите авторизацию на сайте.
             script:
+                $analytics.setSessionResult("Клиенту не авторизован на сайте");
                 $jsapi.stopSession();
 
     state: Hello
@@ -15,6 +16,7 @@ theme: /Conversations
         else:
             a: Простите, сервис временно не работает
             script:
+                $analytics.setSessionResult("Авария");
                 $jsapi.stopSession();
                 
     state: MainMenu
