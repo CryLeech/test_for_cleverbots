@@ -19,8 +19,8 @@ function checkPhoneNumber() {
             parse_mode: "html",
         }
     }
-    $response.replies = $response.replies || [];
-    $response.replies.push(reply);
+    $.response.replies = $.response.replies || [];
+    $.response.replies.push(reply);
 }
 
 function authCheck(phoneNumber) {
