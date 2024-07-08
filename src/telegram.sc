@@ -15,6 +15,7 @@ theme: /Telegram
             script:
                 $temp.response = authCheck($request.query);
             if: $temp.response
+                a: Поздравляю, вы успешно авторизовались.
                 go!: /Conversations/Hello
             else:
                 script:
