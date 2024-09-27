@@ -16,7 +16,7 @@ theme: /
         q!: $regex</start>
         a: Подтвердите, есть ли вам 18 лет.
         script:
-            log(toPrettyString($response));
+            log(toPrettyString($context));
         buttons:
             "Подтверждаю" -> ./Agreement
             "Нет 18 лет" -> ./Disagreemrnt
